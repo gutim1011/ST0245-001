@@ -80,6 +80,7 @@ def dijsktra(graph,origin,destination):
     print("shortest path: "+str(all_pred+[destination]))
     return all_pred+[destination]
 
+#This is an example for a path in which the code works, for now now it presents some errors, but we are working on it 
 path=dijsktra(map_Med,'(-75.7161351, 6.3424055)','(-75.7025278, 6.3425976)')
 geometry_path_list=[]
 j=1
