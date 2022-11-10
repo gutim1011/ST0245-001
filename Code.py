@@ -176,9 +176,9 @@ for i in path2:
             if destination[0]==path2[j]:
                 geometry_path_list2.append(destination[2])
                 distance_2= distance_2+ destination[3][0]
-                riesgo2=riesgo2+destination[3][1]
+                risk_2=risk_2+destination[3][1]
         j=j+1
-riesgo2= riesgo2/j
+risk_2= risk_2/j
 geometry_path_list3=[]
 j=1
 for i in path3:
@@ -187,15 +187,15 @@ for i in path3:
             if destination[0]==path3[j]:
                 geometry_path_list3.append(destination[2])
                 distance_3= distance_3+ destination[3][0]
-                riesgo3=riesgo3+destination[3][1]
+                risk_3=risk_3+destination[3][1]
         j=j+1
-riesgo3= riesgo3/j
+risk_3= risk_3/j
 print("La distancia del primer camino: "+str(distance_1))     
 print("La distancia del segundo camino: "+str(distance_2))
 print("La distancia del tercer camino: "+str(distance_3)) 
-print("El riesgo del primer camino: "+str(riesgo1))     
-print("El riesgo del segundo camino: "+str(riesgo2))
-print("El riesgo del tercer camino: "+str(riesgo3)) 
+print("El riesgo del primer camino: "+str(risk_1))     
+print("El riesgo del segundo camino: "+str(risk_2))
+print("El riesgo del tercer camino: "+str(risk_3)) 
 geometry_path3= pd.DataFrame(geometry_path_list3)
 geometry_path3[0] = geometry_path3[0].apply(wkt.loads)
 geometry_path3 = gpd.GeoDataFrame(geometry_path3)
